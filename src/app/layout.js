@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <footer className="text-white bg-black flex items-center justify-centers text-[10px]">
-          <p className="ml-144 py-1">&copy; 2025 SEDS-BPHC | Space | Astronomy | Propulsion</p>
+          <p className="ml-153 py-1">&copy; 2025 SEDS-BPHC | Space | Astronomy | Propulsion</p>
         </footer>
       </body>
     </html>
