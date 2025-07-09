@@ -1,26 +1,39 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Ubuntu:wght@300;500&display=swap");
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-image: url(./bgimage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family:Helvetica, sans-serif;
 }
+#container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
+  width: 90%;               /* Takes up 90% of the screen on mobile */
+  max-width: 600px;         /* Doesn't grow larger than 600px on big screens */
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+  box-sizing: border-box; /* Includes padding inside width */
+}
+#teamContainer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
+  width: 50%;               /* Takes up 90% of the screen on mobile */
+  max-width: 600px;         /* Doesn't grow larger than 600px on big screens */
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  box-sizing: border-; /* Includes padding inside width */
+}
+#Font {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+::selection {
+  background-color: #235680;
+  color:white; 
+}
+
