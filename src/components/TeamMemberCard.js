@@ -1,13 +1,30 @@
 'use client'
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import Link from 'next/link';
 export default function TeamMemberCard({ name, role, image }) {
+  const localStorageKey = `team-member-${name.replace(/\s/g, '_')}`;
+
   const [isEditing, setIsEditing] = useState(false);
   const [editedName, setEditedName] = useState(name);
   const [editedRole, setEditedRole] = useState(role);
 
+  // Load from localStorage on mount
+  useEffect(() => {
+    const savedData = localStorage.getItem(localStorageKey);
+    if (savedData) {
+      const { savedName, savedRole } = JSON.parse(savedData);
+      setEditedName(savedName);
+      setEditedRole(savedRole);
+    }
+  }, [localStorageKey]);
+
    const handleSave = () => {
     setIsEditing(false);
+    const dataToSave = {
+      savedName: editedName,
+      savedRole: editedRole,
+    };
+    localStorage.setItem(localStorageKey, JSON.stringify(dataToSave));
   };
 
   return (
